@@ -11,15 +11,12 @@ import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 
-public class Login extends AppCompatActivity {
+public class Activity_login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getSupportActionBar().hide();        //hide title bar
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         TextView username =(TextView) findViewById(R.id.username);
         TextView password =(TextView) findViewById(R.id.password);
         MaterialButton loginbtn = (MaterialButton) findViewById(R.id.loginbtn);
@@ -29,10 +26,10 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
                     //correct
-                    Toast.makeText(Login.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity_login.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
                 }else
                     //incorrect
-                    Toast.makeText(Login.this, "LOGIN FAILED !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity_login.this, "LOGIN FAILED !", Toast.LENGTH_SHORT).show();
 
             }
         });
