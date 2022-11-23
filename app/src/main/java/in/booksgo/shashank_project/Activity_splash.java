@@ -21,8 +21,7 @@ public class Activity_splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         img = findViewById(R.id.logo);
-
-
+        
         //For splash screen
         handler = new Handler();
         handler.postDelayed(new Runnable(){
